@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Face Recognition</title>
+
+    <!----------- Font awesome cdn ------------------>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!--------------- Google fonts ----------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!---------- Bootstrap cdn ----------->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+
+    <!---------- custom css ------------>
+    <link rel="stylesheet" href="./asset/css/style.css" />
+  </head>
+  <body>
+    <!-- Menubar -->
+    <section class="header_section">
+      <nav class="header_nav">
+          <div class="container">
+            <div class="header_main">
+              <div class="header_logo">
+                <a href="index.html">Face AI</a>
+              </div>
+              <div class="menus">
+                <ul class="menu_list">
+                  <li class="menu_item">
+                    <a href="index.html" class="menu_link">Home</a>
+                  </li>
+                  <li class="menu_item">
+                    <a href="live.html" class="menu_link">Live</a>
+                  </li>
+                  <li class="menu_item">
+                    <a href="#" class="menu_link">Report</a>
+                  </li>
+                  <li class="menu_item">
+                    <a href="#" class="menu_link">Help</a>
+                  </li>
+                  <li class="menu_item">
+                    <a href="#" class="menu_link"
+                      ><i class="fa-solid fa-user"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+    </section>
+
+    <!-- Live stream -->
+    <section class="live_section">
+      <div class="container">
+        <div class="live_main">
+
+          <!-- LiveStream Header -->
+          <div class="live_header">
+            <select name="camera" id="camera" class="camera header_select">
+              <option value="Camera" selected>Select camera</option>
+              <option value="select_camera" selected>Select camera</option>
+              <option value="camera_1">Camera one</option>
+              <option value="camera_2">Camera two</option>
+              <option value="camera_3">Camera three</option>
+              <option value="camera_4">Camera four</option>
+              <option value="all">Camera all</option>
+            </select>
+
+            <select name="inTime" id="inTime" class="inTime header_select">
+              <option value="select_inTime" selected>Select in time</option>
+              <option value="seven00" >7:00am to 7:30am</option>
+              <option value="seven30" >7:30am to 8:00am</option>
+              <option value="eight00" >8:00am to 8:30am</option>
+              <option value="eight30">8:30am to 9:00am</option>
+              <option value="nine00" >9:00am to 9:30am</option>
+              <option value="nine00" >9:30am to 10:00am</option>
+            </select>
+
+            <select name="outTime" id="outTime" class="outTime header_select">
+              <option value="select_out" selected>Select out time</option>
+              <option value="four00">4:00pm to 4:30pm</option>
+              <option value="four30">4:30pm to 5:00pm</option>
+              <option value="five00">5:00pm to 5:30pm</option>
+              <option value="five30">5:30pm to 6:00pm</option>
+              <option value="six00">6:00pm to 6:30pm</option>
+              <option value="six30">6:30pm to 7:00pm</option>
+            </select>
+
+            <select name="tolerance" id="tolerance" class="tolerance header_select">
+              <option value="select_tolerance" selected>Tolerance time</option>
+              <option value="tolerance10">10 minutes</option>
+              <option value="tolerance20">20 minutes</option>
+              <option value="tolerance30">30 minutes</option>
+              <option value="tolerance40">40 minutes</option>
+              <option value="tolerance50">50 minutes</option>
+              <option value="tolerance1h">1 hour</option>
+              <option value="tolerance1:10h">1.10 hour</option>
+              <option value="tolerance1:20h">1.20 hour</option>
+              <option value="tolerance1:30h">1.30 hour</option>
+            </select>
+          </div>
+
+          <!-- Live Body -->
+          <div class="live_inner">
+
+            <!-- Live Footage -->
+            <div class="live_footage">
+              <div class="camera_single c-1">
+                <p class="c_id">Camera one</p>
+              </div>
+              <div class="camera_single c-2">
+                <p class="c_id">Camera two</p>
+              </div>
+              <div class="camera_single c-3">
+                <p class="c_id">Camera three</p>
+              </div>
+              <div class="camera_single C-4">
+                <p class="c_id">Camera four</p>
+              </div>
+            </div>
+
+            <!-- Face Maching -->
+            <div class="live_chaking">
+
+              <!-- Checking Single person -->
+              <div class="single_chaking">
+
+                <!-- Image form database -->
+                <div class="img_database">
+                  <img src="./asset/img/databaseImg/database.jpeg" alt="" class="database_img">
+                </div>
+
+                <!-- person data -->
+                <div class="person_data">
+                  <div class="person_single_line">
+                    <p class="small_text key">Name: </p>
+                    <p class="small_text2 value">Person Name</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Camera id: </p>
+                    <p class="small_text2 value">C_1</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Date: </p>
+                    <input class="small_text2 value" type="date" name="#" id="#">
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Time: </p>
+                    <input class="small_text2 value" type="time" name="#" id="#">
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Track id: </p>
+                    <p class="small_text2 value">T_10365</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Status: </p>
+                    <select name="#" id="#" class="person_status value">
+                      <option value="status" selected>On time</option>
+                      <option value="status">Late</option>
+                      <option value="status">Fast</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Image form database -->
+                <div class="img_camera">
+                  <img src="./asset/img/liveImg/images.jpeg" alt="" class="camera_img">
+                </div>
+              </div>
+              <!-- Checking Single person -->
+              <div class="single_chaking">
+
+                <!-- Image form database -->
+                <div class="img_database">
+                  <img src="./asset/img/databaseImg/database.jpeg" alt="" class="database_img">
+                </div>
+
+                <!-- person data -->
+                <div class="person_data">
+                  <div class="person_single_line">
+                    <p class="small_text key">Name: </p>
+                    <p class="small_text2 value">Person Name</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Camera id: </p>
+                    <p class="small_text2 value">C_1</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Date: </p>
+                    <input class="small_text2 value" type="date" name="#" id="#">
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Time: </p>
+                    <input class="small_text2 value" type="time" name="#" id="#">
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Track id: </p>
+                    <p class="small_text2 value">T_10365</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Status: </p>
+                    <select name="#" id="#" class="person_status value">
+                      <option value="status" selected>On time</option>
+                      <option value="status">Late</option>
+                      <option value="status">Fast</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Image form database -->
+                <div class="img_camera">
+                  <img src="./asset/img/liveImg/images.jpeg" alt="" class="camera_img">
+                </div>
+              </div>
+              <!-- Checking Single person -->
+              <div class="single_chaking">
+
+                <!-- Image form database -->
+                <div class="img_database">
+                  <img src="./asset/img/databaseImg/database.jpeg" alt="" class="database_img">
+                </div>
+
+                <!-- person data -->
+                <div class="person_data">
+                  <div class="person_single_line">
+                    <p class="small_text key">Name: </p>
+                    <p class="small_text2 value">Person Name</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Camera id: </p>
+                    <p class="small_text2 value">C_1</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Date: </p>
+                    <input class="small_text2 value" type="date" name="#" id="#">
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Time: </p>
+                    <input class="small_text2 value" type="time" name="#" id="#">
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Track id: </p>
+                    <p class="small_text2 value">T_10365</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Status: </p>
+                    <select name="#" id="#" class="person_status value">
+                      <option value="status" selected>On time</option>
+                      <option value="status">Late</option>
+                      <option value="status">Fast</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Image form database -->
+                <div class="img_camera">
+                  <img src="./asset/img/liveImg/images.jpeg" alt="" class="camera_img">
+                </div>
+              </div>
+              <!-- Checking Single person -->
+              <div class="single_chaking">
+
+                <!-- Image form database -->
+                <div class="img_database">
+                  <img src="./asset/img/databaseImg/database.jpeg" alt="" class="database_img">
+                </div>
+
+                <!-- person data -->
+                <div class="person_data">
+                  <div class="person_single_line">
+                    <p class="small_text key">Name: </p>
+                    <p class="small_text2 value">Person Name</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Camera id: </p>
+                    <p class="small_text2 value">C_1</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Date: </p>
+                    <input class="small_text2 value" type="date" name="#" id="#">
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Time: </p>
+                    <input class="small_text2 value" type="time" name="#" id="#">
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Track id: </p>
+                    <p class="small_text2 value">T_10365</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Status: </p>
+                    <select name="#" id="#" class="person_status value">
+                      <option value="status" selected>On time</option>
+                      <option value="status">Late</option>
+                      <option value="status">Fast</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Image form database -->
+                <div class="img_camera">
+                  <img src="./asset/img/liveImg/by-black-jack.jpg" alt="" class="camera_img">
+                </div>
+              </div>
+              <!-- Checking Single person -->
+              <div class="single_chaking">
+
+                <!-- Image form database -->
+                <div class="img_database">
+                  <img src="./asset/img/databaseImg/database.jpeg" alt="" class="database_img">
+                </div>
+
+                <!-- person data -->
+                <div class="person_data">
+                  <div class="person_single_line">
+                    <p class="small_text key">Name: </p>
+                    <p class="small_text2 value">Person Name</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Camera id: </p>
+                    <p class="small_text2 value">C_1</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Date: </p>
+                    <input class="small_text2 value" type="date" name="#" id="#">
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Time: </p>
+                    <input class="small_text2 value" type="time" name="#" id="#">
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Track id: </p>
+                    <p class="small_text2 value">T_10365</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Status: </p>
+                    <select name="#" id="#" class="person_status value">
+                      <option value="status" selected>On time</option>
+                      <option value="status">Late</option>
+                      <option value="status">Fast</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Image form database -->
+                <div class="img_camera">
+                  <img src="./asset/img/liveImg/by-black-jack.jpg" alt="" class="camera_img">
+                </div>
+              </div>
+              <!-- Checking Single person -->
+              <div class="single_chaking">
+
+                <!-- Image form database -->
+                <div class="img_database">
+                  <img src="./asset/img/databaseImg/database.jpeg" alt="" class="database_img">
+                </div>
+
+                <!-- person data -->
+                <div class="person_data">
+                  <div class="person_single_line">
+                    <p class="small_text key">Name: </p>
+                    <p class="small_text2 value">Person Name</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Camera id: </p>
+                    <p class="small_text2 value">C_1</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Date: </p>
+                    <input class="small_text2 value" type="date" name="#" id="#">
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Time: </p>
+                    <input class="small_text2 value" type="time" name="#" id="#">
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Track id: </p>
+                    <p class="small_text2 value">T_10365</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Status: </p>
+                    <select name="#" id="#" class="person_status value">
+                      <option value="status" selected>On time</option>
+                      <option value="status">Late</option>
+                      <option value="status">Fast</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Image form database -->
+                <div class="img_camera">
+                  <img src="./asset/img/liveImg/by-black-jack.jpg" alt="" class="camera_img">
+                </div>
+              </div>
+              <!-- Checking Single person -->
+              <div class="single_chaking">
+
+                <!-- Image form database -->
+                <div class="img_database">
+                  <img src="./asset/img/databaseImg/database.jpeg" alt="" class="database_img">
+                </div>
+
+                <!-- person data -->
+                <div class="person_data">
+                  <div class="person_single_line">
+                    <p class="small_text key">Name: </p>
+                    <p class="small_text2 value">Person Name</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Camera id: </p>
+                    <p class="small_text2 value">C_1</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Date: </p>
+                    <input class="small_text2 value" type="date" name="#" id="#">
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Time: </p>
+                    <input class="small_text2 value" type="time" name="#" id="#">
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Track id: </p>
+                    <p class="small_text2 value">T_10365</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Status: </p>
+                    <select name="#" id="#" class="person_status value">
+                      <option value="status" selected>On time</option>
+                      <option value="status">Late</option>
+                      <option value="status">Fast</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Image form database -->
+                <div class="img_camera">
+                  <img src="./asset/img/liveImg/by-black-jack.jpg" alt="" class="camera_img">
+                </div>
+              </div>
+              <!-- Checking Single person -->
+              <div class="single_chaking">
+
+                <!-- Image form database -->
+                <div class="img_database">
+                  <img src="./asset/img/databaseImg/database.jpeg" alt="" class="database_img">
+                </div>
+
+                <!-- person data -->
+                <div class="person_data">
+                  <div class="person_single_line">
+                    <p class="small_text key">Name: </p>
+                    <p class="small_text2 value">Person Name</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Camera id: </p>
+                    <p class="small_text2 value">C_1</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Date: </p>
+                    <input class="small_text2 value" type="date" name="#" id="#">
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Time: </p>
+                    <input class="small_text2 value" type="time" name="#" id="#">
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Track id: </p>
+                    <p class="small_text2 value">T_10365</p>
+                  </div>
+                  <div class="person_single_line">
+                    <p class="small_text key">Status: </p>
+                    <select name="#" id="#" class="person_status value">
+                      <option value="status" selected>On time</option>
+                      <option value="status">Late</option>
+                      <option value="status">Fast</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Image form database -->
+                <div class="img_camera">
+                  <img src="./asset/img/liveImg/by-black-jack.jpg" alt="" class="camera_img">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section class="footer_section">
+      <div class="footer_black_layer"></div>
+      <div class="container">
+        <div class="footer_main">
+
+          <!-- Footer top -->
+          <div class="footer_top">
+            <div class="footer_top_left">
+              <div class="footer_logo">
+                <a href="index.html" class="fLogoink">Face AI</a>
+              </div>
+              <p class="short_about">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Possimus, consequuntur.
+              </p>
+              <div class="footer_social">
+                <ul class="social_list">
+                  <li class="social_item">
+                    <a
+                      href="https://web.facebook.com/innovativeskillsbd"
+                      class="social_link"
+                       target="_blank"><i class="fa-brands fa-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li class="social_item">
+                    <a href="#" class="social_link" target="_blank"
+                      ><i class="fa-brands fa-x-twitter"></i
+                    ></a>
+                  </li>
+                  <li class="social_item">
+                    <a href="#" class="social_link" target="_blank"
+                      ><i class="fa-brands fa-youtube"></i
+                    ></a>
+                  </li>
+                  <li class="social_item">
+                    <a
+                      href="https://www.youtube.com/@InnovativeSkillsBD"
+                      class="social_link" target="_blank"
+                      ><i class="fa-brands fa-linkedin-in"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="footer_top_right">
+              <div class="quick_link ">
+                <h3 class="footer_sub_title">Quick Link</h3>
+                <ul class="quick_link_list fTul">
+                    <li class="link_item">
+                        <a href="#" class="link-a">Face Recognition</a>
+                    </li>
+                    <li class="link_item">
+                        <a href="#" class="link-a">Live Detection</a>
+                    </li>
+                    <li class="link_item">
+                        <a href="#" class="link-a">Age Varification</a>
+                    </li>
+                    <li class="link_item">
+                        <a href="#" class="link-a">Attendance System</a>
+                    </li>
+                </ul>
+              </div>
+              <div class="footer_company">
+                <h3 class="footer_sub_title">Company</h3>
+                <ul class="com_list fTul">
+                    <li class="company_item">
+                        <a href="#" class="company_link">About Us</a>
+                    </li>
+                    <li class="company_item">
+                        <a href="#" class="company_link">Creer</a>
+                    </li>
+                    <li class="company_item">
+                        <a href="#" class="company_link">Developer guide</a>
+                    </li>
+                </ul>
+              </div>
+              <div class="footer_contact">
+                <h3 class="footer_sub_title">Contact</h3>
+                <ul class="contact_list fTul">
+                    <li class="contact_item">
+                        <a href="tel: +88001705644008" class="contact_link">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>01705644008</span>
+                        </a>
+                    </li>
+                    <li class="contact_item">
+                        <a href="mailto: innovativeskillsbd@gmail.com" class="contact_link">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>innovativeskillsbd@gmail.com</span>
+                        </a>
+                    </li>
+                    <li class="contact_item">
+                        <div class="footer_location">
+                            <i class="fa-solid fa-location-crosshairs"></i>
+                            <span>693, West Shewrapara, Mirpur - 1216</span>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer bottom -->
+          <div class="footer_bottom_nain">
+            <div class="container">
+              <div class="footer_bottom">
+                <div class="footer_bottom_left">
+                  <p class="copy_text">
+                    © 2024 The Website developed by
+                    <a href="innovativeskillsbd.com" class="footer_bottom_link" target="_blank">Innovative Skills</a>
+                  </p>
+                </div>
+                <div class="footer_bottom_right">
+                  <a href="#">Privacy Policy</a>
+                  <a href="#">Terms & Condition</a>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <!------------ jquery cdn ------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!------------ Bootstrap cdn ------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!------- custom js ---------->
+    <script src="./asset/js/script.js"></script>
+  </body>
+</html>
