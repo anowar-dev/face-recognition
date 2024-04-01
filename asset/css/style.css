@@ -90,12 +90,12 @@ img{
 
 .small_text{
     font-size: 0.8rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--white);
 }
 .small_text2{
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--white);
 }
 /*=========== Global CSS end hare =============*/
@@ -516,8 +516,11 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    border-bottom: 1px solid var(--black);
-    margin-bottom: .1rem;
+    background: #c3c2c2;
+    padding: 1rem .5rem;
+}
+.single_chaking:nth-child(odd){
+    background: var(--white);
 }
 .img_database{
     width: 30%;
@@ -535,14 +538,31 @@ img{
 
 .person_single_line{
     margin-bottom: 0;
-    background: var(--blue);
+    background: rgb(237, 236, 236);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     column-gap: 2%;
+    padding: 0.2rem .1rem;
+}
+.person_single_line .value{
+    color: var(--black);
+}
+.person_single_line .key{
+    color: var(--black);
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 .person_single_line:nth-child(odd){
-    background: var(--black);
+    background: rgb(137, 136, 136);
+}
+.person_single_line:nth-child(odd) .value{
+    color: var(--white);
+}
+.person_single_line:nth-child(odd) .key{
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 .person_single_line p{
     margin-bottom: 0;
@@ -553,16 +573,12 @@ img{
 .person_single_line .value{
     width: 58%;
 }
-.person_single_line select, input{
-    background: transparent;
-    border: none;
-    outline: none;
-    color: var(--white);
-}
+
 .person_single_line .person_status{
-    color: var(--white);
-    background: var(--blue);
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    background: transparent;
 }
 /*---------- Live page design end hare -----------------*/
