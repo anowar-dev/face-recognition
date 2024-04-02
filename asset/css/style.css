@@ -113,7 +113,7 @@ img{
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 11;
 }
 .header_main{
     display: flex;
@@ -135,9 +135,18 @@ img{
     font-weight: 600;
     color: var(--white);
     transition: .4s;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
 }
 .menu_item .menu_link:hover{
     color: var(--blue);
+}
+.menu_item .menu_link.active:hover{
+    color: var(--white);
+}
+.menu_link.active{
+    color: var(--white);
+    background: var(--blue);
 }
 
 .header_logo a{
@@ -210,6 +219,7 @@ img{
     text-align: center;
 }
 .price_section_inner{
+    margin-top: 2.5rem;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 2rem;
@@ -461,8 +471,8 @@ img{
     background: var(--blue);
     padding: 1rem;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     column-gap: 1rem;
     border-radius: .5rem .5rem 0 0;
 }
@@ -474,6 +484,7 @@ img{
     cursor: pointer;
     font-size: 1rem;
     font-weight: 500;
+    margin-right: 1rem;
 }
 .live_inner{
     display: flex;
@@ -486,11 +497,14 @@ img{
     
 }
 .live_footage{
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
     border-radius: 0 0 0 .5rem;
 }
 .camera_single{
+    width: 50%;
     height: 23rem;
     border: 1px solid var(--blue);
     position: relative;
@@ -503,6 +517,8 @@ img{
     color: var(--black);
     font-size: 1.5rem;
     font-weight: 700;
+    width: fit-content;
+    white-space: nowrap;
 }
 .live_chaking{
     width: 30%;
@@ -582,3 +598,325 @@ img{
     background: transparent;
 }
 /*---------- Live page design end hare -----------------*/
+
+
+/* mobile menu design start*/
+.mobile_icon_div{
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 690px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem .2rem;
+    border-bottom: 1px solid var(--white);
+}
+.mobile_icon_main{
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: none;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: fit-content;
+    background: var(--black);
+}
+.mobile_logo a{
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--white);
+    text-decoration: none;
+    transition: .4s;
+}
+.mobile_logo a:hover{
+    color: var(--blue);
+}
+.mIcon_btn{
+    width: 1.9rem;
+    height: 1.9rem;
+    text-align: center;
+    line-height: 1.9rem;
+    border-radius: .4rem;
+    transition: all .4s;
+    background: var(--white);
+    border: none;
+    outline: none;
+}
+.mIcon_btn i{
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+.mIcon_btn:hover{
+    background: var(--blue);
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+.mobile_bars{
+    width: 1.9rem;
+    height: 1.9rem;
+    text-align: center;
+    line-height: 1.9rem;
+    border-radius: .4rem;
+    transition: all .4s;
+    background: var(--white);
+    border: none;
+    outline: none;
+}
+.mobile_bars i{
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+.mobile_bars:hover{
+    background: var(--blue);
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+/* Mobile menu design end */
+/*============== Mobile Responsive start hare ==================*/
+
+/* Max width 1200px */
+@media (max-width: 1200px) {
+    .camera_single{
+        height: 18rem;
+    }
+    .live_chaking{
+        width: 40%;
+        height: 36rem;
+    }
+    .live_footage{
+        width: 60%;
+    }
+}
+
+/* max-width 992px */
+
+@media (max-width: 992px) {
+    .mobile_icon_main{
+        display: block;
+        width: 100vw;
+        background: var(--black);
+    }
+    .header_main{
+        padding: 0;
+        width: 100%;
+    }
+    .menus{
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%;
+        max-width: 690px;
+        background: var(--black);
+        margin-top: 5rem;
+        border: 1px solid var(--white);
+        padding-bottom: 0;
+        display: none;
+    }
+    .header_logo{
+        display: none;
+    }
+    .menus .menu_list{
+        flex-direction: column;
+        padding-left: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .menu_item{
+        width: 100%;
+    }
+
+    .menu_item .menu_link{
+        border-radius: unset;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+    }
+    .menu_item .menu_link:hover{
+        color: var(--white);
+        background: var(--blue);
+    }
+
+    /* Slider section  */
+    .slider_main{
+        flex-direction: column-reverse;
+        height: fit-content;
+        margin-top: 8rem;
+    }
+    .slider_main .slider_left{
+        width: 100%;
+        text-align: center;
+    }
+    .slider_left .btn_blue{
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 3rem;
+    }
+    .slider_main .slider_right{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .slider_right .slider_img img{
+        width: auto;
+        height: 20rem;
+    }
+
+    /* Price section */
+    .price_section_inner{
+        grid-template-columns: auto auto;
+    }
+
+    /* Footer for 992px */
+    .footer_main .footer_top{
+        flex-direction: column;
+    }
+    .footer_top_left{
+        width: 100%;
+    }
+    .footer_top_right{
+        padding-left: 0;
+        padding-top: 2rem;
+        flex-direction: column;
+        width: 100%;
+    }
+    .footer_company{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .footer_bottom{
+        flex-direction: column;
+    }
+
+    /* Live section for 992px */
+    .live_inner{
+        flex-direction: column;
+    }
+    .live_footage{
+        width: 100%;
+    }
+    .live_chaking{
+        width: 100%;
+        max-width: 690px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        overflow: auto;
+        height: fit-content;
+    }
+    .img_database{
+        width: 5rem;
+    }
+    .img_camera{
+        width: 5rem;
+    }
+    .header_select{
+        display: block;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Max-width 768px */
+@media (max-width: 768px) {
+    /* manubar for 768px */
+    .mobile_icon_div{
+        max-width: 515px;
+    }
+
+    .price_section_inner{
+        grid-template-columns: auto;
+    }
+
+    /* Live section for 768px */
+    .camera_single{
+        height: 13rem;
+    }
+}
+
+/* max width 520px */
+@media (max-width: 520px) {
+    .slider_text{
+        font-size: 3rem;
+    }
+    .copy_text{
+        text-align: center;
+    }
+
+    /* Footer */
+    .footer_top_left{
+        text-align: center;
+    }
+    .footer_social .social_list{
+        width: fit-content;
+        margin: auto;
+    }
+    .footer_top_right{
+        text-align: center;
+    }
+    .quick_link, .footer_company, .footer_contact{
+        width: fit-content;
+        margin: auto;
+        text-align: center;
+    }
+    .quick_link,.footer_contact a{
+        width: fit-content;
+        margin: auto;
+    }
+    .quick_link a{
+        width: fit-content;
+        margin: auto;
+    }
+    .footer_company{
+        margin: 1.5rem auto;
+    }
+    .footer_company a{
+        width: fit-content;
+        margin: auto;
+    }
+}
+
+/* Max width 480px  */
+@media (max-width: 480px) {
+    .live_footage{
+        flex-direction: column;
+    }
+    .camera_single{
+        height: 20rem;
+        width: 100%;
+    }
+}
+
+
+/* Max width 420px  */
+@media (max-width: 420px) {
+    
+    .camera_single{
+        height: 16rem;
+    }
+    .title_text{
+        font-size: 2rem;
+    }
+}
+
+/* Max width 360px  */
+@media (max-width: 360px) {
+    
+    .camera_single{
+        height: 12rem;
+    }
+    .slider_text{
+        font-size: 2.5rem;
+    }
+}
+
+/* Max width 320px  */
+@media (max-width: 320px) {
+    
+    .camera_single{
+        height: 10rem;
+    }
+}
+
+/*============== Mobile Responsive end hare ==================*/

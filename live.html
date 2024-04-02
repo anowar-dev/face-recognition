@@ -34,6 +34,20 @@
       <nav class="header_nav">
           <div class="container">
             <div class="header_main">
+
+              <!-- Mobile icon -->
+              <div class="mobile_icon_main">
+                <div class="mobile_icon_div">
+                  <div class="mobile_logo">
+                    <a href="index.html">Face AI</a>
+                  </div>
+                  <div class="mobile_icon">
+                    <button class="mIcon_btn"><i class="fa-solid fa-bars"></i></button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- desktop menu -->
               <div class="header_logo">
                 <a href="index.html">Face AI</a>
               </div>
@@ -70,48 +84,55 @@
 
           <!-- LiveStream Header -->
           <div class="live_header">
-            <select name="camera" id="camera" class="camera header_select">
-              <option value="Camera" selected>Select camera</option>
-              <option value="select_camera" selected>Select camera</option>
-              <option value="camera_1">Camera one</option>
-              <option value="camera_2">Camera two</option>
-              <option value="camera_3">Camera three</option>
-              <option value="camera_4">Camera four</option>
-              <option value="all">Camera all</option>
-            </select>
+            <div class="live_header_inner">
+              <select name="camera" id="camera" class="camera header_select">
+                <option value="Camera" selected>Select camera</option>
+                <option value="select_camera" selected>Select camera</option>
+                <option value="camera_1">Camera one</option>
+                <option value="camera_2">Camera two</option>
+                <option value="camera_3">Camera three</option>
+                <option value="camera_4">Camera four</option>
+                <option value="all">Camera all</option>
+              </select>
 
-            <select name="inTime" id="inTime" class="inTime header_select">
-              <option value="select_inTime" selected>Select in time</option>
-              <option value="seven00" >7:00am to 7:30am</option>
-              <option value="seven30" >7:30am to 8:00am</option>
-              <option value="eight00" >8:00am to 8:30am</option>
-              <option value="eight30">8:30am to 9:00am</option>
-              <option value="nine00" >9:00am to 9:30am</option>
-              <option value="nine00" >9:30am to 10:00am</option>
-            </select>
+              <select name="inTime" id="inTime" class="inTime header_select">
+                <option value="select_inTime" selected>Select in time</option>
+                <option value="seven00" >7:00am to 7:30am</option>
+                <option value="seven30" >7:30am to 8:00am</option>
+                <option value="eight00" >8:00am to 8:30am</option>
+                <option value="eight30">8:30am to 9:00am</option>
+                <option value="nine00" >9:00am to 9:30am</option>
+                <option value="nine00" >9:30am to 10:00am</option>
+              </select>
 
-            <select name="outTime" id="outTime" class="outTime header_select">
-              <option value="select_out" selected>Select out time</option>
-              <option value="four00">4:00pm to 4:30pm</option>
-              <option value="four30">4:30pm to 5:00pm</option>
-              <option value="five00">5:00pm to 5:30pm</option>
-              <option value="five30">5:30pm to 6:00pm</option>
-              <option value="six00">6:00pm to 6:30pm</option>
-              <option value="six30">6:30pm to 7:00pm</option>
-            </select>
+              <select name="outTime" id="outTime" class="outTime header_select">
+                <option value="select_out" selected>Select out time</option>
+                <option value="four00">4:00pm to 4:30pm</option>
+                <option value="four30">4:30pm to 5:00pm</option>
+                <option value="five00">5:00pm to 5:30pm</option>
+                <option value="five30">5:30pm to 6:00pm</option>
+                <option value="six00">6:00pm to 6:30pm</option>
+                <option value="six30">6:30pm to 7:00pm</option>
+              </select>
 
-            <select name="tolerance" id="tolerance" class="tolerance header_select">
-              <option value="select_tolerance" selected>Tolerance time</option>
-              <option value="tolerance10">10 minutes</option>
-              <option value="tolerance20">20 minutes</option>
-              <option value="tolerance30">30 minutes</option>
-              <option value="tolerance40">40 minutes</option>
-              <option value="tolerance50">50 minutes</option>
-              <option value="tolerance1h">1 hour</option>
-              <option value="tolerance1:10h">1.10 hour</option>
-              <option value="tolerance1:20h">1.20 hour</option>
-              <option value="tolerance1:30h">1.30 hour</option>
-            </select>
+              <select name="tolerance" id="tolerance" class="tolerance header_select">
+                <option value="select_tolerance" selected>Tolerance time</option>
+                <option value="tolerance10">10 minutes</option>
+                <option value="tolerance20">20 minutes</option>
+                <option value="tolerance30">30 minutes</option>
+                <option value="tolerance40">40 minutes</option>
+                <option value="tolerance50">50 minutes</option>
+                <option value="tolerance1h">1 hour</option>
+                <option value="tolerance1:10h">1.10 hour</option>
+                <option value="tolerance1:20h">1.20 hour</option>
+                <option value="tolerance1:30h">1.30 hour</option>
+              </select>
+            </div>
+            <div class="live_icon d-lg-none ms-auto">
+              <button class="live_menu_close mobile_bars">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
           </div>
 
           <!-- Live Body -->
@@ -126,6 +147,7 @@
                 <p class="c_id">Camera two</p>
               </div>
               <div class="camera_single c-3">
+                <img src="./asset/img/background/blackbg.jpg" alt="">
                 <p class="c_id">Camera three</p>
               </div>
               <div class="camera_single C-4">
