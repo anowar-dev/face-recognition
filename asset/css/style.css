@@ -115,6 +115,15 @@ img{
     width: 100%;
     z-index: 11;
 }
+.headerLogoLink{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: .5rem;
+}
+.headerLogoLink .headerLogo{
+    width: 11rem;
+}
 .header_main{
     display: flex;
     justify-content: space-between;
@@ -153,6 +162,7 @@ img{
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--white);
+    text-decoration: none;
 }
 
 .slider_main{
@@ -885,6 +895,12 @@ img{
     .camera_single{
         height: 20rem;
         width: 100%;
+    }
+    .mobile_logo a{
+        font-size: 1.7rem;
+    }
+    .headerLogoLink .headerLogo{
+        width: 9rem;
     }
 }
 
