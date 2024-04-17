@@ -118,11 +118,15 @@ img{
 .headerLogoLink{
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-end;
     column-gap: .5rem;
+    padding-bottom: 0;
+}
+.headerLogoLink span{
+    margin-bottom: -2px;
 }
 .headerLogoLink .headerLogo{
-    width: 11rem;
+    width: 14rem;
 }
 .header_main{
     display: flex;
@@ -159,10 +163,11 @@ img{
 }
 
 .header_logo a{
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--white);
     text-decoration: none;
+    padding-bottom: 0;
 }
 
 .slider_main{
